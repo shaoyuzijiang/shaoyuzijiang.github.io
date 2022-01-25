@@ -1,6 +1,3 @@
-const bm_result = () => {
-    window.alert("报名成功!");
-}
 
 
 const select_class = () => {
@@ -49,22 +46,59 @@ const select_class_js = () => {
     }
 }
 
+const change_color_all = () => {
+    let btn_select = document.querySelectorAll(".btn_select");
+    for(let i = 0; i < btn_select.length; i++) {
+        btn_select[i].style.color = "#858585";
+        btn_select[i].style.borderColor = "#858585";
+    }
+}
+
+const change_cl_html = () => {
+    document.getElementById("b_html").style.color = "black";
+    document.getElementById("b_html").style.borderBottom="5px solid black";
+
+}
+
+const change_cl_css = () => {
+    document.getElementById("b_css").style.color = "black";
+    document.getElementById("b_css").style.borderBottom="5px solid black";
+}
+
+const change_cl_js = () => {
+    document.getElementById("b_js").style.color = "black";
+    document.getElementById("b_js").style.borderBottom="5px solid black";
+}
+
+const change_cl = () => {
+    document.getElementById("b_all").style.color = "black";
+    document.getElementById("b_all").style.borderBottom="5px solid black";
+}
 
 let b_html = document.getElementById("b_html");
 b_html.addEventListener("click", select_class);
 b_html.addEventListener("click", select_class_html);
-
+b_html.addEventListener("click",change_color_all);
+b_html.addEventListener("click",change_cl_html);
 
 let b_css = document.getElementById("b_css");
 b_css.addEventListener("click", select_class);
 b_css.addEventListener("click", select_class_css);
-
+b_css.addEventListener("click",change_color_all);
+b_css.addEventListener("click",change_cl_css);
 
 let b_js = document.getElementById("b_js");
 b_js.addEventListener("click", select_class);
 b_js.addEventListener("click", select_class_js);
+b_js.addEventListener("click",change_color_all);
+b_js.addEventListener("click",change_cl_js);
 
+let b_all = document.getElementById("b_all");
+b_all.addEventListener("click",select_class);
+b_all.addEventListener("click",change_color_all);
+b_all.addEventListener("click",change_cl);
 
+//轮播图
 window.onload = function () {
     autoMove('img');
 }

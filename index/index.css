@@ -1,84 +1,40 @@
 body{
     display: flex;
     flex-flow: column;
-    /* position: absolute; */
+    position: absolute;
     /* justify-content: space-between; */
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
-.inputinfo{
-    position: absolute;
-    width: 48%;
-    height: 20%;
-    background-color: rgb(255, 255, 255);
-    z-index: 9;
-    left: 26%;
-    top: 60%;
-    border-radius: 30px;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
-    align-items: center;
-    box-shadow: 5px 5px #888888;
-}
-.school, .year, .mail{
-    display: flex;
-    flex-flow: column;
-}
-input{
-    width: 130px;
-    height: 45px;
-    background-color: rgb(152, 162, 170);
-    /* border: 1px solid #ffffff; */
-    border-radius: 10px;
-    margin-top: 20px;
-    outline:0 none !important; 
-    border: none;
-    /* blur:expression(this.onFocus=this.blur()); */
-}
-input:focus{
-    border-radius: 10px;
-    border: 0px;
-    background-color: snow;
-}
-.inputinfo .baoming_btn{
-    width: 140px;
-    height: 50px;
-    border-radius: 25px;
-    border: none;
-    font-size: 20px;
-    text-align: center;
-    border: 0;
-    margin-bottom: -45px;
-}
-.inputinfo .baoming_btn:hover{
-    transition-duration: 0.5s;
-    background-color: dodgerblue;
-}
+
 .top{
 
-    width: 100%;
+    max-width: 100%;
     /* height: 100%; */
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -8px;
+    left: -10px;
     right: 0;
     
 }
 .header {   
     display: flex;
-    width: 100%;
+    width:100%;
+    /* position: absolute; */
     height: 52px;
     background-color: rgb(5, 5, 5, 0.8);
     justify-content: space-around; 
     position: fixed;
     z-index: 9999;
+
 }
 .headl{
     opacity: 90%;
     display: flex;
-    width: 700px;
+    position: relative;
+    width:60%;
     justify-content: flex-start;
     align-items: center;
     color: rgb(170, 170, 185);
@@ -86,7 +42,8 @@ input:focus{
 }
 .headr{
     display: flex;
-    width: 500px;
+    position: relative;
+    width:40%; 
     justify-content: space-around;
     align-items: center;
     /* opacity: 90%; */
@@ -133,6 +90,7 @@ input:focus{
 .icon1 {
     width: 40px;
     height: 40px;
+    margin-left: 60px;
 }
 .guanli_btn{
     /* border: 1px solid #444; */
@@ -140,12 +98,14 @@ input:focus{
     font-weight: 200;
     border-radius: 10px;
     padding: 10px;
+    margin-right: 20px;
     background-color: rgb(103, 56, 212);
     color: rgb(255, 255, 255); 
 }
-/* .head_backg{
+.head_backg{
     position: relative;
-} */
+    left: 0px;
+}
 .slogan{
     display: flex;
     color: rgb(255, 255, 255); 
@@ -165,7 +125,7 @@ input:focus{
     /* border: 3px solid #333; */
     justify-content: space-around;
     /* justify-content: center; */
-    left: 20%;
+    left: 21%;
     top: 750px;
 }
 .fpic{
@@ -173,7 +133,7 @@ input:focus{
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    width: 80%;
+    width: 78%;
     height: 50%;
     left: 10%;
     top: 25%;
@@ -191,20 +151,19 @@ input:focus{
 .main{
     position:absolute;
     top: 100%;
-    left: 20%;
+    left: 26%;
     /* border: 3px solid #333; */
     display: flex;
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
-    width: 60%;
-    /* height: 200%; */
+
     z-index: -1;
 }
 .title{
     justify-content: center;
     position: relative;
-    top: 150px;
+    top: 160px;
     /* margin-top: x; */
     /* margin-bottom: 90%; */
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -215,26 +174,24 @@ input:focus{
     display: flex;
     flex-flow: row;
     align-self: flex-end; 
-    margin-right: 100px;
+    /* margin-right: 100px; */
     align-items: flex-start;
     top: 230px;
     /* margin-bottom: 100px; */
 }
 .btn_select{
     border-color: rgb(74, 74, 74);
-    color: #cc4949;
+    color: #858585;
     border-right: 0px;
     border-left: 0px;
     border-top: 0px;
     border-bottom: 5px ;
-    border-style:ridge;
+    border-style:solid;
     background-color: #ffffff;
     font-size: 20px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
     padding: 10px 10px;
-    white-space: pre;
-  
     cursor: pointer;
     white-space: pre;
 }
@@ -312,4 +269,61 @@ input:focus{
     text-align: center;
     color: rgb(252, 252, 252);
     margin-right: 10px;
+}
+.footer{
+    position: relative;
+    /* width: 200%; */
+    max-width: 100%;
+    background-color: rgb(92, 83, 83);
+    height: 30%;
+    left: -10px;
+    top: 280%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+}
+.footer_left{
+    position:relative;
+    width: 40%;
+    height: 100%;
+    order: 2;
+}
+.square{
+    margin-left: 30%;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-flow: row;
+    /* align-content: center; */
+    align-items: center;
+    justify-content: center;
+    
+}
+.square .alpha{
+    width: 45px;
+    height: 45px;
+    font-size: 30px;
+    text-align: center;
+    /* justify-content: center; */
+    border-radius: 50%;
+    background-color: rgb(13, 14, 14); 
+    color: #ffffff;
+    margin: 10px;
+}
+.footer_right{
+    order: 3;
+    position:relative;
+    width: 50%;
+    height: 100%;
+    /* background-color: black; */
+    display: flex;
+    flex-flow: row;
+}
+.footer_right div{
+    color: #ffffff;
+    margin-top: 40px;
+}
+dd{
+    line-height: 25px;
 }
