@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class_end_demo</title>
+    <link rel="stylesheet" href="./index/index.css" >
+    <link rel="stylesheet" href="./index/baoming.css" >
+</head>
+
+<body>
+    <!-- <style>
+        @import'./index/index.css';
+        @import'./index/baoming.css';
+    </style> -->
+    <div class="inputinfo" id="inputinfo">
+            <div class="school">
+                <span>学校</span>
+                <input id="school" type="text" placeholder="请选择你的学校">
+            </div>
+            <div class="year">
+                <span>入学年份</span>
+                <input id="year" type="text" placeholder="请选择入学年份">
+            </div>
+            <div class="mail">
+                <span>邮箱地址</span>
+                <input type="text" id="email" placeholder="请输入你的电子邮箱">
+            </div>
+            <button type="button" onclick="checkemail()" class="baoming_btn">报名</button>
+
+    </div>
+    <div class="down_baoming" id="msg">
+        <span >邮箱地址不符合要求(yourname@host.com),请重新输入</span>
+    </div>
+    <div class="top">
+        <div class="header">
+            <div class="headl">
+                <img src="./images/icon.png" alt="zhinengxiaochengxu11" class="icon1">
+                <div style="font-size: 25px; margin-left: 20px;">智能小程序</div>
+            </div>
+            <div class="headr">
+                <label class="dropdown">
+                    <span class="headertext">开发文档</span>
+                    <div class="content">
+                        <a href="#option">option one</a>
+                        <a href="#option">option two</a>
+                        <a href="#option">option three</a>
+                    </div>
+                </label>
+
+                <label class="dropdown">
+                    <span class="headertext">交流中心</span>
+                    <div class="content">
+                        <a href="#option">option one</a>
+                        <a href="#option">option two</a>
+                        <a href="#option">option three</a>
+                    </div>
+                </label>
+
+                <label class="dropdown">
+                    <span class="headertext">服务市场</span>
+                    <div class="content">
+                        <a href="#option">option one</a>
+                        <a href="#option">option two</a>
+                        <a href="#option">option three</a>
+                    </div>
+                </label>
+
+                <label class="dropdown">
+                    <span class="headertext">开源联盟</span>
+                    <div class="content">
+                        <a href="#option">option one</a>
+                        <a href="#option">option two</a>
+                        <a href="#option">option three</a>
+                    </div>
+                </label>
+
+
+                <div class="guanli_btn">管理中心</div>
+            </div>
+        </div>
+        <div class="head_backg" style="position:relative">
+            <!-- <h1 style="z-index: 1;">百度前端训练营2021正式开营了</h1> -->
+            <img src="./images/bac1.png" alt="wu"
+                style="z-index: -1; width: 100%;height: 500px;position: absolute; left: 0px;">
+            <img src="./images/bac2.jpg" alt="wu"
+                style="z-index: -1; width: 100%;height: 500px;position: absolute; left: 0px;">
+            <img src="./images/bac3.jpg" alt="wu"
+                style="z-index: -1; width: 100%;height: 500px;position: absolute; left: 0px;">
+            <span class="slogan">百度前端2021训练营,正式开营了!</span>
+        </div>
+
+        <div class="pic_text">
+            <span
+                style="font-style: normal; font-weight: 300; font-size :30px;position: absolute; left: 10%; margin-bottom: 100px;">我们的宗旨</span>
+            <div class="fpic">
+                <div>
+                    <span class="picuptext">独立思考</span>
+                    <div class="pic"><img src="./images/two.jpg" alt="none"
+                            style="width: 150px; height: 100px; border-radius: 10%;"></div>
+                </div>
+                <div>
+                    <span class="picuptext">实践</span>
+                    <div><img src="./images/one.jpg" alt="none" style="width: 150px; height: 100px;border-radius: 10%;">
+                    </div>
+                </div>
+                <div>
+                    <span class="picuptext">总结回顾</span>
+                    <div><img src="./images/three.jpg" alt="none"
+                            style="width: 150px; height: 100px;border-radius: 10%;"></div>
+                </div>
+                <div>
+                    <span class="picuptext">分享交流</span>
+                    <div><img src="./images/four.jpg" alt="none"
+                            style="width: 150px; height: 100px;border-radius: 10%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <!-- <div></div> -->
+        <div class="title">课程安排</div>
+        <!-- <div style="display: flex; to: 500px;"> -->
+        <div class="controlline">
+            <div class="btn_select" id="b_all"> All </div>
+            <div class="btn_select" id="b_html"> HTML </div>
+            <div class="btn_select" id="b_css"> CSS </div>
+            <div class="btn_select" id="b_js">JavaScript</div>
+        </div>
+        <div id="kecheng">
+            <div class="cho">
+                <div class="kecheng_content">
+                    <div class="kechengpic"><img src="./images/556.png" alt="no"
+                            style="width: 100px; height: 100px; border-radius: 50%;"></div>
+                    <div class="kechenginfo">
+                        <div class="classname">第一课 课程名字</div>
+                        <div class="classinfo">这里是课程内容概要，这里是课程内容概要，这里是课程内容概要，这里是课程内容概要，
+                            这里是课程内容概要，这里是课程内容概要，</div>
+                        <div class="classtag">
+                            <!-- <div class="tag_html">HTML</div> -->
+                            <div class="tag_css">CSS</div>
+                            <div class="tag_js">JavaScript</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cho">
+                <div class="kecheng_content">
+                    <div class="kechengpic"><img src="./images/party.jpg" alt="no"
+                            style="width: 100px; height: 100px;border-radius: 50%;"></div>
+                    <div class="kechenginfo">
+                        <div class="classname">第二课 课程名字</div>
+                        <div class="classinfo">这bushiishishih里是课程内容概要，这里是课程内容概要，这里是课程内容概要，这里是课程内容概要，
+                            这里是课程内容概要，这里是课程内容概要，</div>
+                        <div class="classtag">
+                            <div class="tag_html">HTML</div>
+                            <!-- <div class="tag_css">CSS</div> -->
+                            <div class="tag_js">JavaScript</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cho">
+                <div class="kecheng_content">
+                    <div class="kechengpic"><img src="./images/556.png" alt="no"
+                            style="width: 100px; height: 100px;border-radius: 50%;"></div>
+                    <div class="kechenginfo">
+                        <div class="classname">第33课 课程名字</div>
+                        <div class="classinfo">这bushiishishih里是课程内容概要，这里是课程内容概要，这里是课程内容概要，这里是课程内容概要，
+                            这里是课程内容概要，这里是课程内容概要，</div>
+                        <div class="classtag">
+                            <!-- <div class="tag_html">HTML</div> -->
+                            <div class="tag_css">CSS</div>
+                            <div class="tag_js">JavaScript</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cho">
+                <div class="kecheng_content">
+                    <div class="kechengpic"><img src="./images/party.jpg" alt="no"
+                            style="width: 100px; height: 100px;border-radius: 50%;"></div>
+                    <div class="kechenginfo">
+                        <div class="classname">第44课 课程名字</div>
+                        <div class="classinfo">这bushiishishih里是课程内容概要，这里是课程内容概要，这里是课程内容概要，这里是课程内容概要，
+                            这里是课程内容概要，这里是课程内容概要，</div>
+                        <div class="classtag">
+                            <div class="tag_html">HTML</div>
+                            <div class="tag_css">CSS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="">
+                <div class="kecheng_content">
+                    <div class="kechengpic"><img src="party.jpg" alt="no" style="width: 100px; height: 100px;border-radius: 50%;"></div>
+                    <div class="kechenginfo">
+                        <div class="classname">第44课 课程名字</div>
+                        <div class="classinfo">这bushiishishih里是课程内容概要，这里是课程内容概要，这里是课程内容概要，这里是课程内容概要，
+                            这里是课程内容概要，这里是课程内容概要，</div>
+                        <div class="classtag">
+                            <div class="tag_html">HTML</div>
+                            <div class="tag_js">JavaScript</div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <div class="cho">
+                <div class="kecheng_content">
+                    <div class="kechengpic"><img src="./images/party.jpg" alt="no"
+                            style="width: 100px; height: 100px;border-radius: 50%;"></div>
+                    <div class="kechenginfo">
+                        <div class="classname">第66课 课程名字</div>
+                        <div class="classinfo">这bushiishishih里是课程内容概要，这里是课程内容概要，这里是课程内容概要，这里是课程内容概要，
+                            这里是课程内容概要，这里是课程内容概要，</div>
+                        <div class="classtag">
+                            <div class="tag_html">HTML</div>
+                            <!-- <div class="tag_css">CSS</div> -->
+                            <div class="tag_js">JavaScript</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cho">
+                <div class="kecheng_content">
+                    <div class="kechengpic"><img src="./images/party.jpg" alt="no"
+                            style="width: 100px; height: 100px;border-radius: 50%;"></div>
+                    <div class="kechenginfo">
+                        <div class="classname">第n课 课程名字</div>
+                        <div class="classinfo">这bushiishishih里是课程内容概要，这里是课程内容概要，这里是课程内容概要，这里是课程内容概要，
+                            这里是课程内容概要，这里是课程内容概要，</div>
+                        <div class="classtag">
+                            <div class="tag_html">HTML</div>
+                            <div class="tag_css">CSS</div>
+                            <div class="tag_js">JavaScript</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cho">
+                <div class="kecheng_content">
+                    <div class="kechengpic"><img src="./images/556.png" alt="no"
+                            style="width: 100px; height: 100px;border-radius: 50%;"></div>
+                    <div class="kechenginfo">
+                        <div class="classname">第n+1课 课程名字</div>
+                        <div class="classinfo">这bushiishishih里是课程内容概要，这里是课程内容概要，这里是课程内容概要，这里是课程内容概要，
+                            这里是课程内容概要，这里是课程内容概要，</div>
+                        <div class="classtag">
+                            <div class="tag_html">HTML</div>
+                            <div class="tag_css">CSS</div>
+                            <!-- <div class="tag_js">JavaScript</div> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="footer_left">
+            <div class="square">
+                <div class="alpha">I</div>
+                <div class="alpha">F</div>
+                <div class="alpha">E</div>
+            </div>
+        </div>
+        <div class="footer_right">
+            <div>
+                <span style="font-size: 30px; white-space: pre;">          Links</span>
+                <ul>
+                    <dd>百度技术培训中心</dd>
+                    <dd>百度技术培</dd>
+                    <dd>百度技术培训</dd>
+                    <dd>百度技术培训中心</dd>
+                    <dd>百度技术</dd>
+                </ul>
+            </div>
+            <div>
+                <span style="font-size: 30px; white-space: pre;">          Links</span>
+                <ul>
+                    <dd>百度技术培训中心</dd>
+                    <dd>百度技术培</dd>
+                    <dd>百度技术培训</dd>
+                    <dd>百度技术培训中心</dd>
+                    <dd>百度技术</dd>
+                </ul>
+            </div>
+            <div>
+                <span style="font-size: 30px; white-space: pre;">        Links</span>
+                <ul>
+                    <dd>百度技术培训中心</dd>
+                    <dd>百度技术培</dd>
+                    <dd>百度技术培训</dd>
+                    <dd>百度技术培训中心</dd>
+                    <dd>百度技术</dd>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div style="position: relative;">
+        <img src="./bac1.png" alt="none">
+        <span style="position: absolute; top: 0;left: 0; color: aliceblue;">textttttt</span>
+    </div> -->
+    <script src="./index/index.js"></script>
+    <script src="./index/selector.js"></script>
+    <script src="./index/login.js"></script>
+</body>
+
+</html>
