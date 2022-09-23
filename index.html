@@ -5,15 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my resume for 109 </title>
+    <style>
+        @font-face {
+          font-family: 'myfont';
+          src: url('/jz.ttf') format('truetype');
+        }
+        body{
+            white-space:pre;
+        }
+        span{
+            font-family: 'myfont';
+            font-size: 25px;
+        }
+        div{            
+            font-family: 'myfont';
+            font-size: 25px;
+        }
+        #typed-strings{
+            display: inline-block;
+        }
+        
+    </style>
 </head>
 <body>
-    <span class="box"></span>
+    <span id="box1"></span>
+    <div id="typed-strings1">
+       <p>&nbsp;&nbsp;大家好,我是20电信<strong>杨子健</strong> </p> 
+        <!-- <br>你在世俗的名字里, </em><em>不重要了。</em> --薛之谦 -->
+    </div>
+    <div id="typed-strings2">
+        <p>很开心能看到我的这封信,也是我忙忙碌碌之余写的简历</p>
+         <!-- <br>你在世俗的名字里, </em><em>不重要了。</em> --薛之谦 -->
+     </div>
+ 
+    <span class="box2"></span>
+    <span class="box22"></span>
+    <span class="boxmain"></span>
+    <span class="boxhobby"></span>
+    <span class="boxganwu"></span>
+    <span class="box3"></span>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
-    var typed = new Typed(".box", {
-        strings: ["欢迎来到我的博客", "你是最棒的"],//输出的文字
+        var typed1 = new Typed("#box1", {
+        strings: ["To&nbsp;亲爱的109的小伙伴,这是YZJ的一份文字版简历:"],//输出的文字
+        // typeSpeed: 100,//打字的速度
+        // smartBackspace: false, // this is a default
+        // loop: true,
+        typeSpeed: 100,//打字的速度
+        smartBackspace: true, // 开启智能退格 默认false
+        cursorChar: '♡',
+        // backSpeed: 50,//后退速度
+        // backDelay: 500,//后退延迟
+        // loop:false,//是否循环 默认false
+        // startDelay:1000,//起始时间
+        // fadeOut:true,//淡出效果
+       
+  });
+    var typed2 = new Typed(".box2", {
+        stringsElement:'#typed-strings1',//输出的文字
         typeSpeed: 200,//打字的速度
+        smartBackspace: true, // this is a default
+        loop: true,
+        typeSpeed: 100,//打字的速度     
+        backDelay: 5000,//后退延迟 
+        backSpeed: 200,//后退速度
+        startDelay:2000,//起始时间
+  });
+  var typed22 = new Typed(".box22", {
+        stringsElement:'#typed-strings2',//输出的文字
+        // typeSpeed: 100,//打字的速度
+        smartBackspace: true, // this is a default
+        loop: true,
+        typeSpeed: 100,//打字的速度   
+        backDelay: 5000,//后退延迟   
+        backSpeed: 200,//后退速度
+        startDelay:2000,//起始时间
+  });
+  var typedmain = new Typed(".boxmain", {
+    strings:['在2022封校时间将近一年之后,我希望加入109。\n希望在毕业之前多学会一门技艺,同时将学业之外的注意力平衡\n找到内心的一丝丝安逸!'],
+    typeSpeed: 100,//打字的速度
+    smartBackspace: true, // 开启智能退格 默认false
+    cursorChar: '🐕',
+  });
+  var typedhobby = new Typed(".boxhobby", {
+    strings:['之前填问卷时简单介绍了一下自己的兴趣爱好\n其实也是希望在这里能找到更多志同道合的小伙伴!\n比如写代码、学习指弹、打篮球!\n(我自认为)我的动手能力还不错,毕竟在厨房给妈妈打下手也有快20年了'],
+    typeSpeed: 100,//打字的速度
+    smartBackspace: true, // 开启智能退格 默认false
+    cursorChar: '😊',
+  });
+  var typedganwu = new Typed(".boxganwu", {
+    strings:['虽然是工科生I prefer to code in a cafe shop,\ninstead of do my homework in 23th.\n因为之前实习的原因,我想生活需要一点点咖啡来调剂\n作为小白我愿意从头开始,在冬天和109一起度过!'],
+    typeSpeed: 100,//打字的速度
+    smartBackspace: true, // 开启智能退格 默认false
+    cursorChar: '🤔',
+  });
+  var typed3 = new Typed(".box3", {
+        strings: ['最后给大家用文字放一首《唯一》^1000\n` 你真的懂唯一的定义` ^1000\n `并不简单如呼吸` ^1000\n `你真的希望你能厘清`^1000\n `若没交心怎么说明` ^1000\n `我真的爱你` ^1000\n `句句不轻易` ^1000\n `眼神中飘逸` ^1000\n `......` ^1000\n'],//输出的文字
+        // strings: ["我真的爱你", "句句不轻易",'Chars &times; &copy;'],//输出的文字
+        typeSpeed: 50,//打字的速度
+        cursorChar: '♡',
+        smartBackspace: true, // this is a default
+        loop: true,
   });
 </script>
 
